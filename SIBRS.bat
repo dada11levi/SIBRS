@@ -11,7 +11,7 @@ for %%f in (*.mp3) do (
 set /a min = 1
 set /a max = 1800 / %i%
 set /a rndNum=( %RANDOM% %% (%max% - %min% + 1) ) + %min%
-timeout /t %rndNum% nobreak >nul
+timeout /t %rndNum% /nobreak >nul
 set /a rnd=%random% %%%i% +1
 start "" "!list[%rnd%]!"
 goto loop
